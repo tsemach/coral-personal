@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Cinematic editorial theme
+   Ink background · bone-white type · muted brass accent */
+:root {
+  --background: oklch(0.16 0.008 60);
+  --foreground: oklch(0.93 0.012 80);
+
+  --ink: oklch(0.13 0.008 60);
+  --ink-soft: oklch(0.2 0.009 62);
+  --card: oklch(0.19 0.009 62);
+  --card-foreground: oklch(0.93 0.012 80);
+
+  --muted: oklch(0.24 0.008 62);
+  --muted-foreground: oklch(0.66 0.012 78);
+
+  --brass: oklch(0.79 0.088 80);
+  --brass-deep: oklch(0.7 0.1 70);
+
+  --primary: oklch(0.79 0.088 80);
+  --primary-foreground: oklch(0.16 0.01 60);
+
+  --border: oklch(0.36 0.01 66 / 55%);
+  --border-strong: oklch(0.52 0.015 70 / 70%);
+  --ring: oklch(0.79 0.088 80);
+
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-brass: var(--brass);
+  --color-brass-deep: var(--brass-deep);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 2);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--brass);
+    color: var(--ink);
+  }
+  .font-serif {
+    font-optical-sizing: auto;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--brass);
+  }
+  .film-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .reveal-up {
+    animation: revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes revealUp {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .marquee-track {
+    animation: marquee 45s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-up,
+  .marquee-track {
+    animation: none !important;
+  }
+}
