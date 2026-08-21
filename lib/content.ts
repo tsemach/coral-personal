@@ -115,15 +115,27 @@ export type Reel = {
   length: string
   category: string
   featured?: boolean
+  /** YouTube video id — when present, the clip plays inline. */
+  youtubeId?: string
+  /** External link used when there is no embeddable video yet. */
+  link?: string
+  /** Marks the slot as awaiting its source file (e.g. the Wix showreel). */
+  pending?: boolean
 }
 
 export const REELS: Reel[] = [
-  { title: 'Coral Mizrachi — Showreel 2026', length: '02:19', category: 'Showreel', featured: true },
-  { title: 'The Ark — Season 2 Trailer', length: '02:12', category: 'Trailer' },
-  { title: 'The Ark — Live Chat with Coral (Lati Meir)', length: '1:03:01', category: 'Interview' },
-  { title: 'Foreign Form — Trailer', length: '02:01', category: 'Trailer' },
-  { title: 'Hebrew Showreel 2022', length: '02:28', category: 'Showreel' },
-  { title: 'Or — Official Trailer / \u05D0\u05D5\u05E8 \u05D8\u05E8\u05D9\u05D9\u05DC\u05E8 \u05E8\u05E9\u05DE\u05D9', length: '00:58', category: 'Trailer' },
+  {
+    title: 'Coral Mizrachi — Showreel 2026',
+    length: '02:19',
+    category: 'Showreel',
+    featured: true,
+    pending: true,
+  },
+  { title: 'The Ark — Season 2 Trailer', length: '02:12', category: 'Trailer', youtubeId: '6xY-ooYMscI' },
+  { title: 'Foreign Form — Trailer', length: '02:01', category: 'Trailer', youtubeId: '4TEC2dOZgnI' },
+  { title: 'The Ark — Live Chat with Coral (Lati Meir)', length: '1:03:01', category: 'Interview', youtubeId: 'VL5SSTyCmPg' },
+  { title: 'Hebrew Showreel 2022', length: '02:28', category: 'Showreel', link: 'https://www.coralmizrachi.com/reel' },
+  { title: 'Or — Official Trailer / \u05D0\u05D5\u05E8 \u05D8\u05E8\u05D9\u05D9\u05DC\u05E8 \u05E8\u05E9\u05DE\u05D9', length: '00:58', category: 'Trailer', link: 'https://www.coralmizrachi.com/reel' },
 ]
 
 export const REEL_LINK = 'https://www.coralmizrachi.com/reel'
