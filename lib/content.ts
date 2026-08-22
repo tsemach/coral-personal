@@ -29,23 +29,38 @@ export const HEADSHOTS = [
   '/coral/hs-12.avif',
 ]
 
-export type Still = {
-  src: string
-  caption: string
-  production: string
-}
+export type Still = { src: string; w: number; h: number }
 
 export const STILLS: Still[] = [
-  {
-    src: '/coral/prod-1.avif',
-    caption: 'Lati Meir aboard the Ark',
-    production: 'The Ark',
-  },
-  {
-    src: '/coral/prod-2.avif',
-    caption: 'On location',
-    production: 'The Ark',
-  },
+  { src: '/coral/prod-1.avif', w: 1600, h: 887 },
+  { src: '/coral/prod-2.avif', w: 1600, h: 1000 },
+  { src: '/coral/prod-3.avif', w: 1600, h: 886 },
+  { src: '/coral/prod-4.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-5.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-6.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-7.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-8.avif', w: 1597, h: 1092 },
+  { src: '/coral/prod-9.avif', w: 1600, h: 893 },
+  { src: '/coral/prod-10.avif', w: 1591, h: 1100 },
+  { src: '/coral/prod-11.avif', w: 1585, h: 1090 },
+  { src: '/coral/prod-12.avif', w: 1600, h: 879 },
+  { src: '/coral/prod-13.avif', w: 1600, h: 680 },
+  { src: '/coral/prod-14.avif', w: 1518, h: 1093 },
+  { src: '/coral/prod-15.avif', w: 1568, h: 1092 },
+  { src: '/coral/prod-16.avif', w: 659, h: 480 },
+  { src: '/coral/prod-17.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-18.avif', w: 1600, h: 670 },
+  { src: '/coral/prod-19.avif', w: 1055, h: 789 },
+  { src: '/coral/prod-20.avif', w: 1085, h: 781 },
+  { src: '/coral/prod-21.avif', w: 582, h: 419 },
+  { src: '/coral/prod-22.avif', w: 1600, h: 1600 },
+  { src: '/coral/prod-23.avif', w: 1579, h: 1079 },
+  { src: '/coral/prod-24.avif', w: 1440, h: 795 },
+  { src: '/coral/prod-25.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-26.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-27.avif', w: 1600, h: 1027 },
+  { src: '/coral/prod-28.avif', w: 1269, h: 711 },
+  { src: '/coral/prod-29.avif', w: 545, h: 305 },
 ]
 
 export const ABOUT = [

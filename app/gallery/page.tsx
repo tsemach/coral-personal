@@ -3,7 +3,7 @@ import { PageHero } from '@/components/page-hero'
 import { GalleryGrid } from '@/components/gallery-grid'
 import { StillsGallery } from '@/components/stills-gallery'
 import { Reveal } from '@/components/reveal'
-import { HEADSHOTS, STILLS } from '@/lib/content'
+import { HEADSHOTS } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'Gallery — Coral Mizrachi',
@@ -35,7 +35,7 @@ export default function GalleryPage() {
               <span className="h-px flex-1 bg-border" aria-hidden="true" />
             </h2>
           </Reveal>
-          <StillsGallery stills={STILLS} />
+          <StillsGallery />
         </div>
       </section>
     </>
