@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { ProjectCarousel } from '@/components/project-carousel'
+import { InlineVideo } from '@/components/inline-video'
 import { PROJECTS } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -28,24 +28,6 @@ export default function ProjectsPage() {
               <article className="bg-background p-8 sm:p-12">
                 <div className="grid gap-8 lg:grid-cols-12">
                   <div className="lg:col-span-4">
-                    {p.slides ? (
-                      <div className="mb-6">
-                        <ProjectCarousel slides={p.slides} title={p.title} />
-                      </div>
-                    ) : (
-                      p.image && (
-                        <div className="mb-6 overflow-hidden border border-border-strong bg-secondary">
-                          <Image
-                            src={p.image.src || '/placeholder.svg'}
-                            alt={`${p.title} — still`}
-                            width={p.image.w}
-                            height={p.image.h}
-                            sizes="(min-width: 1024px) 30vw, 100vw"
-                            className="h-auto w-full object-cover"
-                          />
-                        </div>
-                      )
-                    )}
                     <span className="font-mono text-xs text-muted-foreground">
                       {String(i + 1).padStart(2, '0')}
                     </span>
@@ -63,6 +45,29 @@ export default function ProjectsPage() {
                     <p className="mt-1 text-sm text-muted-foreground">
                       {p.director}
                     </p>
+
+                    {p.slides && (
+                      <div className="mt-6">
+                        <ProjectCarousel slides={p.slides} title={p.title} />
+                      </div>
+                    )}
+                    {!p.slides && p.videoUrl && (
+                      <div className="mt-6">
+                        <InlineVideo url={p.videoUrl} title={p.title} />
+                      </div>
+                    )}
+                    {!p.slides && !p.videoUrl && p.image && (
+                      <div className="mt-6 overflow-hidden border border-border-strong bg-secondary">
+                        <Image
+                          src={p.image.src || '/placeholder.svg'}
+                          alt={`${p.title} — still`}
+                          width={p.image.w}
+                          height={p.image.h}
+                          sizes="(min-width: 1024px) 30vw, 100vw"
+                          className="h-auto w-full object-cover"
+                        />
+                      </div>
+                    )}
                   </div>
 
                   <div className="lg:col-span-8">
@@ -80,17 +85,6 @@ export default function ProjectsPage() {
                           </li>
                         ))}
                       </ul>
-                    )}
-                    {p.videoUrl && (
-                      <a
-                        href={p.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group mt-6 inline-flex items-center gap-2 border-b border-brass pb-0.5 text-sm uppercase tracking-[0.15em] text-brass transition-colors hover:text-foreground"
-                      >
-                        Watch on YouTube
-                        <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                      </a>
                     )}
                   </div>
                 </div>
