@@ -22,10 +22,14 @@ export default function ProjectsPage() {
       />
 
       <section className="px-5 py-16 sm:px-8 sm:py-24">
-        <div className="mx-auto max-w-7xl space-y-px overflow-hidden border border-border bg-border">
+        <div className="mx-auto max-w-7xl overflow-hidden border border-border">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.title} delay={(i % 2) * 60}>
-              <article className="bg-background p-8 sm:p-12">
+              <article
+                className={`bg-background p-8 sm:p-12 ${
+                  i > 0 ? 'border-t border-border' : ''
+                }`}
+              >
                 {/* Header: number, title and meta at the top of the box */}
                 <header className="mb-8">
                   <span className="font-mono text-xs text-muted-foreground">
