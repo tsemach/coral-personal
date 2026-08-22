@@ -29,6 +29,25 @@ export const HEADSHOTS = [
   '/coral/hs-12.avif',
 ]
 
+export type Still = {
+  src: string
+  caption: string
+  production: string
+}
+
+export const STILLS: Still[] = [
+  {
+    src: '/coral/prod-1.avif',
+    caption: 'Lati Meir aboard the Ark',
+    production: 'The Ark',
+  },
+  {
+    src: '/coral/prod-2.avif',
+    caption: 'On location',
+    production: 'The Ark',
+  },
+]
+
 export const ABOUT = [
   'Coral is an actress from Tel Aviv, Israel, working in the US, Europe, and the Middle East. She began her acting career at the early age of 13 when she booked her first agent Shirley Puterman, and started auditioning for film, TV and theater, bouncing onto every stage she could find. Soon after she appeared in Comedy Central\u2019s sitcom Shutafim (Roommates), and was cast as Lucinda in the musical Into The Woods (Stephen Sondheim) at the Zamir Theatre.',
   'A graduate of the American Academy of Dramatic Arts in New York, Coral has worked around the globe in several TV and film productions. She is most known for her role as Hannah in Ski-ter Jones\u2019s Netflix pilot Block Boys: Behind the Lights, and her role as Jesse in Arian Behpour\u2019s feature film Foreign Form. Other key credits include Eitan Kunit\u2019s TV pilot Trippin Stacia, Kristie Grosvenor\u2019s short film Self Conclusion, Wesley Aldrich\u2019s official music video You Can\u2019t Kill Me Now, and Vlada Maricic\u2019s official music video Sonet (Label: PGP RTS).',
