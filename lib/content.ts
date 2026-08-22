@@ -182,6 +182,7 @@ export type Project = {
   body: string
   accolades?: string[]
   image?: { src: string; w: number; h: number }
+  slides?: { src: string; w: number; h: number }[]
 }
 
 export const PROJECTS: Project[] = [
@@ -217,6 +218,13 @@ export const PROJECTS: Project[] = [
     role: 'Ron',
     body: 'A short drama about life and death, and an unusual friendship. Coral plays Ron, who decides to have one last drink at the bar next to her apartment before she plans to take her own life that night. Gil, the bartender, is not going to let that happen on his conscience.',
     accolades: ['Official Selection — 2022 Tel Aviv International Short Film Festival'],
+    slides: [
+      { src: '/coral/tequila-1.avif', w: 1200, h: 659 },
+      { src: '/coral/tequila-2.avif', w: 1200, h: 584 },
+      { src: '/coral/tequila-3.avif', w: 1200, h: 503 },
+      { src: '/coral/tequila-4.avif', w: 1200, h: 510 },
+      { src: '/coral/tequila-5.avif', w: 1200, h: 521 },
+    ],
   },
   {
     title: "Can't Kill Me Now",

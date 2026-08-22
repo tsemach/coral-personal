@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
+import { ProjectCarousel } from '@/components/project-carousel'
 import { PROJECTS } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -26,17 +27,23 @@ export default function ProjectsPage() {
               <article className="bg-background p-8 sm:p-12">
                 <div className="grid gap-8 lg:grid-cols-12">
                   <div className="lg:col-span-4">
-                    {p.image && (
-                      <div className="mb-6 overflow-hidden border border-border-strong bg-secondary">
-                        <Image
-                          src={p.image.src || '/placeholder.svg'}
-                          alt={`${p.title} — still`}
-                          width={p.image.w}
-                          height={p.image.h}
-                          sizes="(min-width: 1024px) 30vw, 100vw"
-                          className="h-auto w-full object-cover"
-                        />
+                    {p.slides ? (
+                      <div className="mb-6">
+                        <ProjectCarousel slides={p.slides} title={p.title} />
                       </div>
+                    ) : (
+                      p.image && (
+                        <div className="mb-6 overflow-hidden border border-border-strong bg-secondary">
+                          <Image
+                            src={p.image.src || '/placeholder.svg'}
+                            alt={`${p.title} — still`}
+                            width={p.image.w}
+                            height={p.image.h}
+                            sizes="(min-width: 1024px) 30vw, 100vw"
+                            className="h-auto w-full object-cover"
+                          />
+                        </div>
+                      )
                     )}
                     <span className="font-mono text-xs text-muted-foreground">
                       {String(i + 1).padStart(2, '0')}
