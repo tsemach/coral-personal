@@ -271,7 +271,7 @@ export const PROJECTS: Project[] = [
     meta: 'TV Pilot',
     role: 'Stacia',
     body: 'Shot in Detroit, Trippin Stacia follows a young woman moving to Michigan to find herself and develop her career as a singer. Coral was cast as the leading character, Stacia, upon graduating and wrapping her performance in Radium Girls.',
-    image: { src: '/coral/proj-trippin-stacia.avif', w: 1200, h: 681 },
+    image: { src: '/coral/proj-trippin-stacia.avif', w: 900, h: 600 },
   },
   {
     title: 'Block Boys',
