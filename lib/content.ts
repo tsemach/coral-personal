@@ -9,7 +9,7 @@ export const NAV = [
 ]
 
 export const SOCIAL = {
-  imdb: 'https://www.imdb.com/name/nm9955013/',
+  imdb: 'https://www.imdb.com/name/nm13128171/',
   instagram: 'https://www.instagram.com/',
   email: 'Coral.miz320@gmail.com',
 }
