@@ -183,6 +183,7 @@ export type Project = {
   accolades?: string[]
   image?: { src: string; w: number; h: number }
   slides?: { src: string; w: number; h: number }[]
+  videoUrl?: string
 }
 
 export const PROJECTS: Project[] = [
@@ -233,6 +234,7 @@ export const PROJECTS: Project[] = [
     role: 'Lead',
     body: 'Coral was cast in the official music video for the single "Can\u2019t Kill Me Now" by Wesley Aldrich, part of his album Bullies and Saints. The music video documents Coral\u2019s real-life struggle with cancer.',
     accolades: ['Lift-Off Session 2022 — Official Selection'],
+    videoUrl: 'https://www.youtube.com/watch?v=rw7YzjgV_cM',
   },
   {
     title: 'My Favorite Place',

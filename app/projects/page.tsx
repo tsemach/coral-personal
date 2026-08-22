@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { ProjectCarousel } from '@/components/project-carousel'
@@ -79,6 +80,17 @@ export default function ProjectsPage() {
                           </li>
                         ))}
                       </ul>
+                    )}
+                    {p.videoUrl && (
+                      <a
+                        href={p.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group mt-6 inline-flex items-center gap-2 border-b border-brass pb-0.5 text-sm uppercase tracking-[0.15em] text-brass transition-colors hover:text-foreground"
+                      >
+                        Watch on YouTube
+                        <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
                     )}
                   </div>
                 </div>
