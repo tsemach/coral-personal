@@ -29,6 +29,40 @@ export const HEADSHOTS = [
   '/coral/hs-12.avif',
 ]
 
+export type Still = { src: string; w: number; h: number }
+
+export const STILLS: Still[] = [
+  { src: '/coral/prod-1.avif', w: 1600, h: 887 },
+  { src: '/coral/prod-2.avif', w: 1600, h: 1000 },
+  { src: '/coral/prod-3.avif', w: 1600, h: 886 },
+  { src: '/coral/prod-4.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-5.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-6.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-7.avif', w: 1600, h: 888 },
+  { src: '/coral/prod-8.avif', w: 1597, h: 1092 },
+  { src: '/coral/prod-9.avif', w: 1600, h: 893 },
+  { src: '/coral/prod-10.avif', w: 1591, h: 1100 },
+  { src: '/coral/prod-11.avif', w: 1585, h: 1090 },
+  { src: '/coral/prod-12.avif', w: 1600, h: 879 },
+  { src: '/coral/prod-13.avif', w: 1600, h: 680 },
+  { src: '/coral/prod-14.avif', w: 1518, h: 1093 },
+  { src: '/coral/prod-15.avif', w: 1568, h: 1092 },
+  { src: '/coral/prod-16.avif', w: 659, h: 480 },
+  { src: '/coral/prod-17.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-18.avif', w: 1600, h: 670 },
+  { src: '/coral/prod-19.avif', w: 1055, h: 789 },
+  { src: '/coral/prod-20.avif', w: 1085, h: 781 },
+  { src: '/coral/prod-21.avif', w: 582, h: 419 },
+  { src: '/coral/prod-22.avif', w: 1600, h: 1600 },
+  { src: '/coral/prod-23.avif', w: 1579, h: 1079 },
+  { src: '/coral/prod-24.avif', w: 1440, h: 795 },
+  { src: '/coral/prod-25.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-26.avif', w: 1600, h: 900 },
+  { src: '/coral/prod-27.avif', w: 1600, h: 1027 },
+  { src: '/coral/prod-28.avif', w: 1269, h: 711 },
+  { src: '/coral/prod-29.avif', w: 545, h: 305 },
+]
+
 export const ABOUT = [
   'Coral is an actress from Tel Aviv, Israel, working in the US, Europe, and the Middle East. She began her acting career at the early age of 13 when she booked her first agent Shirley Puterman, and started auditioning for film, TV and theater, bouncing onto every stage she could find. Soon after she appeared in Comedy Central\u2019s sitcom Shutafim (Roommates), and was cast as Lucinda in the musical Into The Woods (Stephen Sondheim) at the Zamir Theatre.',
   'A graduate of the American Academy of Dramatic Arts in New York, Coral has worked around the globe in several TV and film productions. She is most known for her role as Hannah in Ski-ter Jones\u2019s Netflix pilot Block Boys: Behind the Lights, and her role as Jesse in Arian Behpour\u2019s feature film Foreign Form. Other key credits include Eitan Kunit\u2019s TV pilot Trippin Stacia, Kristie Grosvenor\u2019s short film Self Conclusion, Wesley Aldrich\u2019s official music video You Can\u2019t Kill Me Now, and Vlada Maricic\u2019s official music video Sonet (Label: PGP RTS).',
