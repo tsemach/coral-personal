@@ -254,6 +254,8 @@ export const PROJECTS: Project[] = [
     role: 'Jessie',
     body: 'A feature-length horror sci-fi drama about Jack and his blind sister Alice. After a car accident, Jack struggles with guilt and new ways to face the past. Coral plays Jessie, Jack\u2019s girlfriend, who soon gets caught up in the mess with both him and his sister.',
     accolades: ['CinoPrimo Film Festival 2018'],
+    image: { src: '/coral/proj-foreign-form.avif', w: 848, h: 1200 },
+    videoUrl: 'https://www.youtube.com/watch?v=4TEC2dOZgnI',
   },
   {
     title: 'Vic & Nimi',

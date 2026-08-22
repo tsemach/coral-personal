@@ -51,12 +51,7 @@ export default function ProjectsPage() {
                         <ProjectCarousel slides={p.slides} title={p.title} />
                       </div>
                     )}
-                    {!p.slides && p.videoUrl && (
-                      <div className="mt-6">
-                        <InlineVideo url={p.videoUrl} title={p.title} />
-                      </div>
-                    )}
-                    {!p.slides && !p.videoUrl && p.image && (
+                    {!p.slides && p.image && (
                       <div className="mt-6 overflow-hidden border border-border-strong bg-secondary">
                         <Image
                           src={p.image.src || '/placeholder.svg'}
@@ -66,6 +61,11 @@ export default function ProjectsPage() {
                           sizes="(min-width: 1024px) 30vw, 100vw"
                           className="h-auto w-full object-cover"
                         />
+                      </div>
+                    )}
+                    {!p.slides && p.videoUrl && (
+                      <div className="mt-6">
+                        <InlineVideo url={p.videoUrl} title={p.title} />
                       </div>
                     )}
                   </div>
