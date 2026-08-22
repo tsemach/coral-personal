@@ -181,6 +181,7 @@ export type Project = {
   role?: string
   body: string
   accolades?: string[]
+  image?: { src: string; w: number; h: number }
 }
 
 export const PROJECTS: Project[] = [
@@ -195,6 +196,7 @@ export const PROJECTS: Project[] = [
       '#1 show on Syfy Channel',
       'Streaming on Syfy and Peacock',
     ],
+    image: { src: '/coral/ark-poster.avif', w: 900, h: 1195 },
   },
   {
     title: 'Self Conclusion',
@@ -206,6 +208,7 @@ export const PROJECTS: Project[] = [
       'Lift-Off Session 2022 — Official Selection',
       'Quarter-Finalist — 2022 World Impact Film Festival',
     ],
+    image: { src: '/coral/proj-self-conclusion.avif', w: 800, h: 1066 },
   },
   {
     title: 'Tequila',
@@ -232,6 +235,7 @@ export const PROJECTS: Project[] = [
       '2nd place — Create Your Film competition',
       '1st place, Script & Theme — Create Your Film competition',
     ],
+    image: { src: '/coral/proj-my-favorite-place.avif', w: 1200, h: 610 },
   },
   {
     title: 'Foreign Form',
@@ -247,6 +251,7 @@ export const PROJECTS: Project[] = [
     meta: 'Short Film',
     role: 'Vic',
     body: 'A look into a day in the life of siblings living together. Vic is a 25-year-old poet trying to find herself; Nimi, a few years older, is fighting off depression, playing a dangerous game with an unloaded gun. Things get complicated when Vic loads the gun without him knowing.',
+    image: { src: '/coral/proj-vic-nimi.avif', w: 777, h: 1100 },
   },
   {
     title: 'Trippin Stacia',
@@ -254,6 +259,7 @@ export const PROJECTS: Project[] = [
     meta: 'TV Pilot',
     role: 'Stacia',
     body: 'Shot in Detroit, Trippin Stacia follows a young woman moving to Michigan to find herself and develop her career as a singer. Coral was cast as the leading character, Stacia, upon graduating and wrapping her performance in Radium Girls.',
+    image: { src: '/coral/proj-trippin-stacia.avif', w: 1200, h: 681 },
   },
   {
     title: 'Block Boys',
@@ -261,6 +267,7 @@ export const PROJECTS: Project[] = [
     meta: 'Pilot · Vegas Narco-Drama',
     role: 'Marie',
     body: 'Shot in Nevada and produced by Andrea Meshel, Block Boys: Beyond the Light shows a different side of Las Vegas. Coral plays Marie, the assistant of the drug lord in town.',
+    image: { src: '/coral/proj-block-boys.avif', w: 1136, h: 610 },
   },
 ]
 
