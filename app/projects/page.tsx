@@ -63,12 +63,8 @@ export default function ProjectsPage() {
                         />
                       </div>
                     )}
-                    {!p.slides && p.videoUrl && (
-                      <div
-                        className={p.image ? 'mt-6' : undefined}
-                      >
-                        <InlineVideo url={p.videoUrl} title={p.title} />
-                      </div>
+                    {!p.slides && !p.image && p.videoUrl && (
+                      <InlineVideo url={p.videoUrl} title={p.title} />
                     )}
                   </div>
 
@@ -90,6 +86,14 @@ export default function ProjectsPage() {
                     )}
                   </div>
                 </div>
+
+                {/* When a project has both a poster and a video (Foreign Form),
+                    center the trailer below the two-column row */}
+                {p.image && p.videoUrl && (
+                  <div className="mx-auto mt-10 w-full max-w-2xl">
+                    <InlineVideo url={p.videoUrl} title={p.title} />
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}
