@@ -21,9 +21,6 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative z-10 mx-auto flex min-h-svh max-w-7xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 sm:pb-24">
-        <p className="eyebrow reveal-up mb-5" style={{ animationDelay: '0.05s' }}>
-          Actress · NYC · Israel · Serbia
-        </p>
         <h1 className="reveal-up font-serif text-[3.4rem] font-medium leading-[0.86] tracking-tight text-foreground sm:text-[6rem] lg:text-[8.5rem]">
           Coral
           <br />
